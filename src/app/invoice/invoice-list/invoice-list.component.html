@@ -1,0 +1,33 @@
+
+ 
+
+
+ 
+<div class="container">
+  <h2>CloudInn POS</h2>
+  <p>Demo Emad El sherbiny.</p>
+   <button class="btn btn-success btn-lg btn-block" (click)="addNewInv()"><span class="glyphicon glyphicon-plus"></span> Add new Invoice</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Invoice ID</th>
+        <th>Amount</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of receipts">
+        <td>{{item.id}}</td>
+        <td>{{item.total|number:'1.1-1'}}</td>
+        
+      </tr>      
+      <tr class="success">
+        <td>Total</td>
+        <td>{{total|number:'1.1-1'}}</td>
+        
+      </tr>
+       
+    </tbody>
+  </table>
+</div>
+ 
