@@ -19,15 +19,20 @@ total:number=0;
 
  //navigate to new inovice
   addNewInv():void{
+  debugger
         this._router.navigate(['./invoice-detail'])
   }
 //bind list of invoices
     bindList():void{
-   var temp=JSON.parse(localStorage.getItem("recipts"));
-   temp.forEach(x => {
+      var temp=JSON.parse(localStorage.getItem("recipts"));
+      if (temp != null) {
+temp.forEach(x => {
     this.receipts.push(x);
     this.total += x.total
   });
+      }
+   
+   
       
    }
 
