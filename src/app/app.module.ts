@@ -26,7 +26,7 @@ import { InvoiceDetailsComponent } from './invoice/invoice-details/invoice-detai
        {path:'invoice-detail' , component: InvoiceDetailsComponent},
   
  {path:'',redirectTo:'InvoiceListComponent',pathMatch:'full'},
-  // {path:'**' ,component:InvoiceListComponent}
+  {path:'**' ,component:InvoiceListComponent}
 
 ])
   ],
